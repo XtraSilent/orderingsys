@@ -7,8 +7,7 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
+        <li><?= $this->Form->postLink(__('Delete'),
                 ['action' => 'delete', $delivery->id],
                 ['confirm' => __('Are you sure you want to delete # {0}?', $delivery->id)]
             )

@@ -1,4 +1,5 @@
     <?php
+
     /**
      * @var \App\View\AppView $this
      * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
@@ -8,11 +9,9 @@
                     
     <ul class="side-nav">
     <?php
-            if ($this->request->session()->read('Auth.User')){
-                if($this->request->session()->read('Auth.User.role_id') == 1)
-                
-                {
-                    ?>
+    if ($this->request->session()->read('Auth.User')) {
+        if ($this->request->session()->read('Auth.User.role_id') == 1) {
+            ?>
                 <li class="heading"><?= __('User') ?></li>
                 <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
                 <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
@@ -36,21 +35,23 @@
                 <li class="heading"><?= __('Status') ?></li>
                 <li><?= $this->Html->link(__('List Status'), ['controller' => 'Statuss', 'action' => 'index']) ?> </li>
                 <?php
-                }
-            elseif ($this->request->session()->read('Auth.User.role_id') == 2) {
+
+            } elseif ($this->request->session()->read('Auth.User.role_id') == 2) {
                 ?>
 
                 <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
                 <li><?= $this->Html->link(__('List Orders'), ['controller' => 'Orders', 'action' => 'index']) ?> </li>
                 <li><?= $this->Html->link(__('New Order'), ['controller' => 'Orders', 'action' => 'add']) ?> </li>
     <?php
-                }else{   
-                ?>
+
+} else {
+    ?>
                 <li><?= $this->Html->link(__('New Order'), ['controller' => 'Orders', 'action' => 'add']) ?> </li>
                 
-        <?php	}
-            }
-        ?>
+        <?php	
+    }
+}
+?>
     </ul>
         
     </nav>
@@ -64,30 +65,27 @@
                     <th scope="col"><?= $this->Paginator->sort('address') ?></th>
                     <th scope="col"><?= $this->Paginator->sort('telephone') ?></th>
                     
-                    <?php if ($this->request->session()->read('Auth.User')){
-                        if($this->request->session()->read('Auth.User.role_id') == 1||$this->request->session()->read('Auth.User.role_id')==2)
-                        
-                        {
-                    ?>
+                    <?php if ($this->request->session()->read('Auth.User')) {
+                        if ($this->request->session()->read('Auth.User.role_id') == 1 || $this->request->session()->read('Auth.User.role_id') == 2) {
+                            ?>
                     <th scope="col"><?= $this->Paginator->sort('role_id') ?></th>
                     <th scope="col"><?= $this->Paginator->sort('department_id') ?></th>  
                     <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                     <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 
-                        <?php }else ?>
+                        <?php 
+                    } else ?>
                         <th scope="col" class="actions"><?= __('Actions') ?></th>
                 </tr>
                 <?php 
-                }
+            }
             ?>    
             </thead>
             <tbody>
-            <?php if ($this->request->session()->read('Auth.User')){
-                        if($this->request->session()->read('Auth.User.role_id') == 1)
-                        
-                        {
+            <?php if ($this->request->session()->read('Auth.User')) {
+                if ($this->request->session()->read('Auth.User.role_id') == 1) {
                     ?>
-                <?php foreach ($users as $user): ?>
+                <?php foreach ($users as $user) : ?>
                 <tr>
                     <td><?= $this->Number->format($user->id) ?></td>
                     <td><?= h($user->name) ?></td>
@@ -107,13 +105,13 @@
                 </tr>
                 <?php endforeach; ?>
                 <?php
-                        }elseif($this->request->session()->read('Auth.User.role_id') == 3)
-                        {
-                        ?>
+
+            } elseif ($this->request->session()->read('Auth.User.role_id') == 3) {
+                ?>
                         
                         <tr>
-                        <td><?=$auth['User']['id'] ?></td>
-                            <td><?=$auth['User']['name'] ?></td>
+                        <td><?= $auth['User']['id'] ?></td>
+                            <td><?= $auth['User']['name'] ?></td>
                             <td><?= $auth['User']['address'] ?></td>
                             <td><?= $auth['User']['telephone'] ?></td>
                             <td class="actions">        
@@ -123,12 +121,10 @@
         
                         </tr>
                        
-                        <?php }
-                        elseif($this->request->session()->read('Auth.User.role_id') == 2)
-                        
-                        {
-                    ?>
-                <?php foreach ($users as $user): ?>
+                        <?php 
+                    } elseif ($this->request->session()->read('Auth.User.role_id') == 2) {
+                        ?>
+                <?php foreach ($users as $user) : ?>
                 <tr>
                     <td><?= $this->Number->format($user->id) ?></td>
                     <td><?= h($user->name) ?></td>
@@ -147,8 +143,9 @@
                 </tr>
                 <?php endforeach; ?>
                 <?php
-                        }
-                     }?>
+
+            }
+        } ?>
             </tbody>
         </table>
         <div class="paginator">
