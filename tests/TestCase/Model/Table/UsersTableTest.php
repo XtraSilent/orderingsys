@@ -31,6 +31,7 @@ class UsersTableTest extends TestCase
         'app.orders',
         'app.menus',
         'app.stocks',
+        'app.statuses',
         'app.deliveries'
     ];
 

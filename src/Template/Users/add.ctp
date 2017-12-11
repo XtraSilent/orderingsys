@@ -60,6 +60,7 @@
             echo $this->Form->control('name');
             echo $this->Form->control('address');
             echo $this->Form->control('telephone');
+            echo $this->Form->control('email');
             echo $this->Form->control('role_id', ['options' => $roles, 'empty' => true]);
             echo $this->Form->control('department_id', ['options' => $departments, 'empty' => true]);
             echo $this->Form->control('password');

@@ -60,8 +60,14 @@
             echo $this->Form->control('name');
             echo $this->Form->control('address');
             echo $this->Form->control('telephone');
-            echo $this->Form->control('role_id', ['options' => $roles, 'empty' => true]);
-            echo $this->Form->control('department_id', ['options' => $departments, 'empty' => true]);
+            echo $this->Form->control('email');
+        if ($this->request->session()->read('Auth.User')) {
+                if ($this->request->session()->read('Auth.User.role_id') == 1) {  
+                echo $this->Form->control('role_id', ['options' => $roles, 'empty' => true]);
+                echo $this->Form->control('department_id', ['options' => $departments, 'empty' => true]);
+                 }
+                }?>
+            <?php
             echo $this->Form->control('password');
         ?>
     </fieldset>

@@ -4,6 +4,7 @@
 		<h2 class="text-center">Register</h2>
 		<?= $this->Form->create($user); ?>
 			<?= $this->Form->input('name'); ?>
+			<?= $this->Form->input('email'); ?>
 			<?= $this->Form->input('address'); ?>
             <?= $this->Form->input('telephone'); ?>
 			<?= $this->Form->input('password', array('type' => 'password')); ?>

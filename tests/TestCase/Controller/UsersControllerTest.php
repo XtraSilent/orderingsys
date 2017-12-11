@@ -23,6 +23,7 @@ class UsersControllerTest extends IntegrationTestCase
         'app.orders',
         'app.menus',
         'app.stocks',
+        'app.statuses',
         'app.deliveries'
     ];
 
