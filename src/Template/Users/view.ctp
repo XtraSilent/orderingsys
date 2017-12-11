@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
@@ -6,40 +7,51 @@
 //print_r( $this->Session->read('Auth.User'));
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <?php
-				if ($this->request->session()->read('Auth.User')){
-                    if($this->request->session()->read('Auth.User.role_id') == 1)
-                    
-					{
-                        ?>
-        <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Roles'), ['controller' => 'Roles', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Role'), ['controller' => 'Roles', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Departments'), ['controller' => 'Departments', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Department'), ['controller' => 'Departments', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Orders'), ['controller' => 'Orders', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Order'), ['controller' => 'Orders', 'action' => 'add']) ?> </li>
-        <?php
-                    }
-                elseif ($this->request->session()->read('Auth.User.role_id') == 2) {
-                    ?>
+<ul class="side-nav">
+    <?php
+    if ($this->request->session()->read('Auth.User')) {
+        if ($this->request->session()->read('Auth.User.role_id') == 1) {
+            ?>
+                <li class="heading"><?= __('User') ?></li>
+                <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
+                <li class="heading"><?= __('Role') ?></li>
+                <li><?= $this->Html->link(__('List Roles'), ['controller' => 'Roles', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('New Role'), ['controller' => 'Roles', 'action' => 'add']) ?> </li>
+                <li class="heading"><?= __('Department') ?></li>
+                <li><?= $this->Html->link(__('List Departments'), ['controller' => 'Departments', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('New Department'), ['controller' => 'Departments', 'action' => 'add']) ?> </li>
+                <li class="heading"><?= __('Order') ?></li>
+                <li><?= $this->Html->link(__('List Orders'), ['controller' => 'Orders', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('New Order'), ['controller' => 'Orders', 'action' => 'add']) ?> </li>
+                <li class="heading"><?= __('Menu') ?></li>
+                <li><?= $this->Html->link(__('List Menu'), ['controller' => 'Menus', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('New Menus'), ['controller' => 'Menus', 'action' => 'add']) ?> </li>
+                <li class="heading"><?= __('Stock') ?></li>
+                <li><?= $this->Html->link(__('List Stocks'), ['controller' => 'Stocks', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('New Stocks'), ['controller' => 'Stocks', 'action' => 'add']) ?> </li>
+                <li class="heading"><?= __('Customer') ?></li>
+                <li><?= $this->Html->link(__('List Customers'), ['controller' => 'Users', 'action' => 'display']) ?> </li>
+                <li class="heading"><?= __('Status') ?></li>
+                <li><?= $this->Html->link(__('List Status'), ['controller' => 'Statuss', 'action' => 'index']) ?> </li>
+                <?php
 
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Orders'), ['controller' => 'Orders', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Order'), ['controller' => 'Orders', 'action' => 'add']) ?> </li>
-        <?php
-                    }else{   
-                    ?>
-                    <li><?= $this->Html->link(__('New Order'), ['controller' => 'Orders', 'action' => 'add']) ?> </li>
-                    
-            <?php	}
-                }
-			?>
+            } elseif ($this->request->session()->read('Auth.User.role_id') == 2) {
+                ?>
+
+                <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('List Orders'), ['controller' => 'Orders', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('New Order'), ['controller' => 'Orders', 'action' => 'add']) ?> </li>
+    <?php
+
+} else {
+    ?>
+                <li><?= $this->Html->link(__('New Order'), ['controller' => 'Orders', 'action' => 'add']) ?> </li>
+                
+        <?php	
+    }
+}
+?>
     </ul>
 </nav>
 
@@ -84,7 +96,7 @@
     
     <div class="related">
         <h4><?= __('Related Orders') ?></h4>
-        <?php if (!empty($user->orders)): ?>
+        <?php if (!empty($user->orders)) : ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
@@ -94,7 +106,7 @@
                 <th scope="col"><?= __('Time') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
-            <?php foreach ($user->orders as $orders): ?>
+            <?php foreach ($user->orders as $orders) : ?>
             <tr>
                 <td><?= h($orders->id) ?></td>
                 <td><?= h($orders->menu_id) ?></td>
@@ -103,9 +115,8 @@
                 <td><?= h($orders->time) ?></td>
 
                 <?php
-				if ($this->request->session()->read('Auth.User')){
-					if($this->request->session()->read('Auth.User.role_id') == 1)
-					{
+                if ($this->request->session()->read('Auth.User')) {
+                    if ($this->request->session()->read('Auth.User.role_id') == 1) {
                         ?> 
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Orders', 'action' => 'view', $orders->id]) ?>
@@ -113,9 +124,10 @@
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Orders', 'action' => 'delete', $orders->id], ['confirm' => __('Are you sure you want to delete # {0}?', $orders->id)]) ?>
                 </td>
                 <?php
-					}
-				}
-			?>
+
+            }
+        }
+        ?>
             </tr>
             <?php endforeach; ?>
         </table>
