@@ -51,4 +51,4 @@ framework by default. You can, however, replace it with any other library or
 custom styles.
 
 ## User
-If you want this code with database. Please email me at alifruzycs@gmai.com. Thank You!
+If you want this code with database. Please email me at alifruzycs@gmail.com. Thank You!
