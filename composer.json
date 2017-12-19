@@ -10,7 +10,17 @@
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "~1.0",
-        "josegonzalez/dotenv": "2.*"
+        "josegonzalez/dotenv": "2.*",
+        "backstageel/cakephp-gentelella-theme": "^1.2",
+        "friendsofcake/crud": "^5.2",
+        "friendsofcake/crud-view": "^0.9.5",
+        "friendsofcake/bootstrap-ui": "^1.2",
+        "ciricihq/adminlte": "^0.0.2",
+        "maiconpinto/cakephp-adminlte-theme": "^1.0",
+        "friendsofcake/crud-users": "^0.6.0",
+        "dereuromark/cakephp-geo": "^1.2",
+        "alaxos/cakephp3-bootstrap-theme": "^1.1",
+        "davidyell/nice-admin-bake-scripts": "^3.0"
     },
     "require-dev": {
         "psy/psysh": "@stable",

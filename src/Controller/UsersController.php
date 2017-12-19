@@ -133,6 +133,7 @@ class UsersController extends AppController
 
     public function login()
     {
+      
         if($this->Auth->user['id'])//check if user already login
         {
             $this->flash->warning(__('You are already logged in !'));
@@ -173,6 +174,65 @@ class UsersController extends AppController
         $this->set('_serialize', ['users']);
        
    }
+
+   public function searchmanager()
+	{
+		if ($this->request->is(['patch','post','put']))
+		{$search=$this->request->data['search'];
+		 $user=$this->Users->find('all')
+		 ->where (['users.role_id'=>1,
+				  'users.name LIKE'=> '%' . $search . '%']);
+				   $this->set(compact('user'));
+				   $this->set('_serialize', ['user']);}
+    }
+
+    
+    public function listorder($pid = null, $id)
+	{
+		$title = 'Order List';
+		$this->set(compact('title'));
+		
+		$user = $this->Users->get($id, [
+            'contain' => ['Users', 'Orders']
+        ]);
+
+        $this->set('user', $user);
+        $this->set('_serialize', ['user']);
+		
+		$order = $this->Orders->Users->get($pid);
+		$this->set('order', $order);
+        $this->set('_serialize', ['order']);
+		
+		$this->set('getid', $id);
+		$this->set('getpid', $pid);
+		
+		
+        /*
+		$users = $this->Companies->Chatrooms->Users->find('list', ['limit' => 200]);
+        $this->set(compact('chatroom', 'companies', 'users'));
+        $this->set('_serialize', ['chatroom']);
+		
+		$rest = $this->Companies->Chatrooms->find('all', [
+				'contain' => ['Companies', 'Users'],
+				'conditions' => ['company_id' => $id]
+		]);
+		$this->set('rest', $rest);
+        $this->set('_serialize', ['rest']);
+		
+		 $this->paginate = [
+            'contain' => ['Companies', 'Users']
+        ];
+		
+        $result = $this->paginate($rest, ['limit' => 2, 'order' => array('created' => 'desc')]);
+
+        $this->set(compact('result'));
+        $this->set('_serialize', ['result']);*/
+		
+	}
+	
+    
+    
+   
    
 
     

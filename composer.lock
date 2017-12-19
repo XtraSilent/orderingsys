@@ -4,8 +4,94 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "163c94a955a9c68b07a07d64efc0940d",
+    "content-hash": "1b1f1d7399209020e0d8c1830bee1691",
     "packages": [
+        {
+            "name": "alaxos/cakephp3-bootstrap-theme",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alaxos/cakephp3-bootstrap-theme.git",
+                "reference": "2bedb404d844535dfd24e47e708bb810a6a0fdf4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alaxos/cakephp3-bootstrap-theme/zipball/2bedb404d844535dfd24e47e708bb810a6a0fdf4",
+                "reference": "2bedb404d844535dfd24e47e708bb810a6a0fdf4",
+                "shasum": ""
+            },
+            "require": {
+                "alaxos/cakephp3-libs": "~1.0",
+                "cakephp/cakephp": "~3.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Alaxos\\BootstrapTheme\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Bootstrap bake templates for CakePHP 3",
+            "homepage": "https://github.com/alaxos/cakephp3-bootstrap-theme",
+            "keywords": [
+                "bake",
+                "bootstrap",
+                "cakephp",
+                "libraries",
+                "theme"
+            ],
+            "time": "2017-03-17T10:22:51+00:00"
+        },
+        {
+            "name": "alaxos/cakephp3-libs",
+            "version": "v1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alaxos/cakephp3-libs.git",
+                "reference": "8f4b41b66bb6fb9ce9e866bae942351dddcbce7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alaxos/cakephp3-libs/zipball/8f4b41b66bb6fb9ce9e866bae942351dddcbce7d",
+                "reference": "8f4b41b66bb6fb9ce9e866bae942351dddcbce7d",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.4",
+                "cakephp/plugin-installer": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7|^6.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Alaxos"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Alaxos\\": "src",
+                    "Alaxos\\Test\\Fixture\\": "tests\\Fixture"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Custom libraries for CakePHP framework (>= v3.4)",
+            "homepage": "https://github.com/alaxos/cakephp3-libs",
+            "keywords": [
+                "cakephp",
+                "libraries"
+            ],
+            "time": "2017-09-14T06:29:04+00:00"
+        },
         {
             "name": "aura/intl",
             "version": "3.0.0",
@@ -51,6 +137,55 @@
                 "localization"
             ],
             "time": "2017-01-20T05:00:11+00:00"
+        },
+        {
+            "name": "backstageel/cakephp-gentelella-theme",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/backstageel/cakephp-gentelella-theme.git",
+                "reference": "5c2c5a75adf659c7e4c7c0d419483a4f45b2462b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/backstageel/cakephp-gentelella-theme/zipball/5c2c5a75adf659c7e4c7c0d419483a4f45b2462b",
+                "reference": "5c2c5a75adf659c7e4c7c0d419483a4f45b2462b",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "friendsofcake/bootstrap-ui": "@stable",
+                "php": ">=5.4.16"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Gentelella\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elísio Leonardo",
+                    "email": "elisio.leonardo@gmail.com",
+                    "homepage": "https://elisioleonardo.com/",
+                    "role": "Author"
+                }
+            ],
+            "description": "CakePHP 3.x Gentelella Theme.",
+            "homepage": "https://github.com/backstageel/cakephp-gentelella-theme",
+            "keywords": [
+                "cakephp",
+                "plugin",
+                "templates"
+            ],
+            "time": "2017-04-21T14:22:45+00:00"
         },
         {
             "name": "cakephp/cakephp",
@@ -289,6 +424,559 @@
             "time": "2017-03-21T13:48:47+00:00"
         },
         {
+            "name": "ciricihq/adminlte",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ciricihq/cake-adminlte.git",
+                "reference": "fbf1f7c516c08a9025476534f891d43371be37d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ciricihq/cake-adminlte/zipball/fbf1f7c516c08a9025476534f891d43371be37d6",
+                "reference": "fbf1f7c516c08a9025476534f891d43371be37d6",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.2",
+                "gourmet/knp-menu": "~0.4",
+                "php": ">=5.5.9",
+                "symfony/yaml": "~3.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "*",
+                "phpunit/phpunit": "*",
+                "squizlabs/php_codesniffer": "~2.6.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Cirici\\AdminLTE\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "description": "AdminLTE theme for CakePHP",
+            "time": "2016-06-02T21:40:20+00:00"
+        },
+        {
+            "name": "davidyell/nice-admin-bake-scripts",
+            "version": "3.0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davidyell/CakePHP-NiceAdminBakeScripts.git",
+                "reference": "b712c740b4c9e2fcd039fa5c2aa37c1362c962be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davidyell/CakePHP-NiceAdminBakeScripts/zipball/b712c740b4c9e2fcd039fa5c2aa37c1362c962be",
+                "reference": "b712c740b4c9e2fcd039fa5c2aa37c1362c962be",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^3.4",
+                "friendsofcake/bootstrap-ui": "~1.0",
+                "php": ">=5.6"
+            },
+            "suggest": {
+                "friendsofcake/crud": "Production ready scaffolding for controllers. Don't even bother writing code!",
+                "friendsofcake/search": "Filtering for index templates to find things easier.",
+                "twbs/bootstrap": "Twitter Bootstrap front-end framework, for styles and layout."
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "NiceAdminBakeTheme\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Yell",
+                    "email": "neon1024@gmail.com",
+                    "homepage": "http://jedistirfry.co.uk/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "NiceAdminBakeTheme plugin for CakePHP",
+            "keywords": [
+                "admin",
+                "bake",
+                "bootstrap",
+                "cakephp",
+                "cakephp3",
+                "theme"
+            ],
+            "time": "2017-08-21T15:47:32+00:00"
+        },
+        {
+            "name": "dereuromark/cakephp-geo",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dereuromark/cakephp-geo.git",
+                "reference": "5824260ee60ae08cd19b178a054ad55365794380"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dereuromark/cakephp-geo/zipball/5824260ee60ae08cd19b178a054ad55365794380",
+                "reference": "5824260ee60ae08cd19b178a054ad55365794380",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/orm": "^3.4",
+                "php": ">=5.6",
+                "willdurand/geocoder": "^3.3"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "^3.4",
+                "fig-r/psr2r-sniffer": "dev-master"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Geo\\": "src",
+                    "Geo\\Test\\Fixture\\": "tests/Fixture"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Scherer",
+                    "homepage": "http://www.dereuromark.de",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A CakePHP plugin around geocoding tools and helpers.",
+            "homepage": "https://github.com/dereuromark/cakephp-geo",
+            "keywords": [
+                "cakephp",
+                "geocoding",
+                "helpers",
+                "maps",
+                "plugin"
+            ],
+            "time": "2017-11-11T14:18:54+00:00"
+        },
+        {
+            "name": "egeloen/http-adapter",
+            "version": "0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egeloen/ivory-http-adapter.git",
+                "reference": "9641f11487ec26b24c6bbcee4f267cf62f60b855"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egeloen/ivory-http-adapter/zipball/9641f11487ec26b24c6bbcee4f267cf62f60b855",
+                "reference": "9641f11487ec26b24c6bbcee4f267cf62f60b855",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.8",
+                "zendframework/zend-diactoros": "^1.1"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "^3.0.3",
+                "ext-curl": "*",
+                "guzzle/guzzle": "^3.9.4@dev",
+                "guzzlehttp/guzzle": "^4.1.4|^5.0|^6.0",
+                "kriswallsmith/buzz": "^0.13",
+                "nategood/httpful": "^0.2.17",
+                "phpunit/phpunit": "^4.0",
+                "phpunit/phpunit-mock-objects": "dev-matcher-verify as 2.3.x-dev",
+                "psr/log": "^1.0",
+                "react/dns": "^0.4.1",
+                "react/http-client": "^0.4",
+                "satooshi/php-coveralls": "^0.6",
+                "symfony/event-dispatcher": "^2.0",
+                "zendframework/zend-http": "^2.3.4",
+                "zendframework/zendframework1": ">=1.12.9,<=1.12.14|^1.12.16"
+            },
+            "suggest": {
+                "ext-curl": "Allows you to use the cURL adapter",
+                "ext-http": "Allows you to use the PECL adapter",
+                "guzzle/guzzle": "Allows you to use the Guzzle 3 adapter",
+                "guzzlehttp/guzzle": "Allows you to use the Guzzle 4 adapter",
+                "kriswallsmith/buzz": "Allows you to use the Buzz adapter",
+                "nategood/httpful": "Allows you to use the httpful adapter",
+                "psr/log": "Allows you to use the logger event subscriber",
+                "symfony/event-dispatcher": "Allows you to use the event lifecycle",
+                "symfony/stopwatch": "Allows you to use the stopwatch http adapter and event subscriber",
+                "zendframework/zend-http": "Allows you to use the Zend 2 adapter",
+                "zendframework/zendframework1": "Allows you to use the Zend 1 adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ivory\\HttpAdapter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric GELOEN",
+                    "email": "geloen.eric@gmail.com"
+                }
+            ],
+            "description": "Issue HTTP request for PHP 5.3+.",
+            "keywords": [
+                "http",
+                "http-adapter",
+                "http-client",
+                "psr-7"
+            ],
+            "abandoned": "php-http/httplug",
+            "time": "2015-08-12T09:35:40+00:00"
+        },
+        {
+            "name": "friendsofcake/bootstrap-ui",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfCake/bootstrap-ui.git",
+                "reference": "fd02bdcd2bb3f58fa7e68c4d770836e0ac9ac988"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/fd02bdcd2bb3f58fa7e68c4d770836e0ac9ac988",
+                "reference": "fd02bdcd2bb3f58fa7e68c4d770836e0ac9ac988",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "<6.0"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "BootstrapUI\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jad Bitar",
+                    "homepage": "http://jadb.io",
+                    "role": "Author"
+                },
+                {
+                    "name": "Others",
+                    "homepage": "https://github.com/friendsofcake/bootstrap-ui/graphs/contributors"
+                }
+            ],
+            "description": "Twitter Bootstrap 3 support for CakePHP 3",
+            "homepage": "http://github.com/friendsofcake/bootstrap-ui",
+            "keywords": [
+                "bootstrap",
+                "cakephp",
+                "twitter"
+            ],
+            "time": "2017-08-04T00:58:47+00:00"
+        },
+        {
+            "name": "friendsofcake/crud",
+            "version": "5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfCake/crud.git",
+                "reference": "ae533de6c23a362e3b7ac0f35a62c8cddf9d178e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfCake/crud/zipball/ae533de6c23a362e3b7ac0f35a62c8cddf9d178e",
+                "reference": "ae533de6c23a362e3b7ac0f35a62c8cddf9d178e",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^3.2.2"
+            },
+            "require-dev": {
+                "friendsofcake/cakephp-test-utilities": "dev-master",
+                "friendsofcake/search": "dev-master",
+                "phpunit/phpunit": "<6.0"
+            },
+            "suggest": {
+                "friendsofcake/crud-json-api": "Crud listener for building APIs following the JSON API specification",
+                "friendsofcake/crud-view": "Automated admin backend based on your Crud configuration.",
+                "friendsofcake/search": "Provides search capabilities for the Crud plugin."
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Crud\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Winther",
+                    "homepage": "http://cakephp.nu/",
+                    "role": "Author"
+                },
+                {
+                    "name": "José Lorenzo Rodríguez",
+                    "homepage": "https://github.com/lorenzo",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Andy Dawson",
+                    "homepage": "https://github.com/ad7six",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "ADmad",
+                    "homepage": "https://github.com/admad",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "CakePHP Application development on steroids - rapid prototyping / scaffolding & production ready code - XML / JSON APIs and more",
+            "homepage": "https://github.com/FriendsOfCake/crud",
+            "keywords": [
+                "bake",
+                "cake",
+                "cakephp",
+                "create",
+                "crud",
+                "delete",
+                "retrieve",
+                "scaffold",
+                "scaffolding",
+                "update"
+            ],
+            "time": "2017-08-30T18:37:42+00:00"
+        },
+        {
+            "name": "friendsofcake/crud-users",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfCake/crud-users.git",
+                "reference": "a5ea034e6e9b72d49accf0337746ce2f3eb8cc9e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfCake/crud-users/zipball/a5ea034e6e9b72d49accf0337746ce2f3eb8cc9e",
+                "reference": "a5ea034e6e9b72d49accf0337746ce2f3eb8cc9e",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "friendsofcake/crud": "~5.0"
+            },
+            "require-dev": {
+                "friendsofcake/cakephp-test-utilities": "dev-master",
+                "phpunit/phpunit": "*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "CrudUsers\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ADmad",
+                    "homepage": "https://github.com/admad",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Jad Bitar",
+                    "homepage": "http://jadb.io/",
+                    "role": "Author"
+                }
+            ],
+            "description": "Adds basic users support to CakePHP 3 applications that use the Crud plugin.",
+            "homepage": "https://github.com/FriendsOfCake/crud-users",
+            "keywords": [
+                "Users",
+                "cakephp",
+                "crud"
+            ],
+            "time": "2017-08-12T20:00:13+00:00"
+        },
+        {
+            "name": "friendsofcake/crud-view",
+            "version": "0.9.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfCake/crud-view.git",
+                "reference": "197ca9889ebd4db29cfd03e86b85ef7a8c86e0e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfCake/crud-view/zipball/197ca9889ebd4db29cfd03e86b85ef7a8c86e0e6",
+                "reference": "197ca9889ebd4db29cfd03e86b85ef7a8c86e0e6",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.4",
+                "friendsofcake/bootstrap-ui": "~1.2",
+                "friendsofcake/crud": "*"
+            },
+            "require-dev": {
+                "friendsofcake/cakephp-test-utilities": "dev-master",
+                "markstory/asset_compress": "^3.2"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "CrudView\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Winther",
+                    "homepage": "http://cakephp.nu/",
+                    "role": "Author"
+                },
+                {
+                    "name": "Jose Diaz-Gonzalez",
+                    "homepage": "http://josediazgonzalez.com/",
+                    "role": "Author"
+                }
+            ],
+            "description": "View layer for CRUD",
+            "homepage": "https://github.com/FriendsOfCake/crud-view",
+            "keywords": [
+                "bake",
+                "cake",
+                "cakephp",
+                "create",
+                "crud",
+                "delete",
+                "retrieve",
+                "scaffold",
+                "scaffolding",
+                "update"
+            ],
+            "time": "2017-11-03T08:07:25+00:00"
+        },
+        {
+            "name": "gourmet/knp-menu",
+            "version": "v0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gourmet/knp-menu.git",
+                "reference": "81d7102ac18982653761c6097e8da0bcb7e4672a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gourmet/knp-menu/zipball/81d7102ac18982653761c6097e8da0bcb7e4672a",
+                "reference": "81d7102ac18982653761c6097e8da0bcb7e4672a",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "knplabs/knp-menu": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Gourmet\\KnpMenu\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jad Bitar",
+                    "homepage": "http://jadb.io",
+                    "role": "Author"
+                }
+            ],
+            "description": "KnpMenu for CakePHP 3",
+            "homepage": "http://github.com/gourmet/knp-menu",
+            "keywords": [
+                "cakephp",
+                "knp",
+                "menu"
+            ],
+            "time": "2015-07-21T17:11:50+00:00"
+        },
+        {
+            "name": "igorw/get-in",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igorw/get-in.git",
+                "reference": "170ded831f49abc6a6061f655aba9bdbcf7b8111"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/igorw/get-in/zipball/170ded831f49abc6a6061f655aba9bdbcf7b8111",
+                "reference": "170ded831f49abc6a6061f655aba9bdbcf7b8111",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/get_in.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                }
+            ],
+            "description": "Functions for for hash map (assoc array) traversal.",
+            "keywords": [
+                "assoc-array",
+                "hash-map"
+            ],
+            "time": "2014-12-15T23:03:51+00:00"
+        },
+        {
             "name": "josegonzalez/dotenv",
             "version": "2.1.0",
             "source": {
@@ -339,6 +1027,70 @@
                 "php"
             ],
             "time": "2017-01-03T01:04:05+00:00"
+        },
+        {
+            "name": "knplabs/knp-menu",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpMenu.git",
+                "reference": "655630a1db0b72108262d1a844de3b1ba0885be5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/655630a1db0b72108262d1a844de3b1ba0885be5",
+                "reference": "655630a1db0b72108262d1a844de3b1ba0885be5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "psr/container": "^1.0",
+                "symfony/http-foundation": "~2.4|~3.0|^4.0",
+                "symfony/phpunit-bridge": "~3.3|^4.0",
+                "symfony/routing": "~2.3|~3.0|^4.0",
+                "twig/twig": "~1.16|~2.0"
+            },
+            "suggest": {
+                "twig/twig": "for the TwigRenderer and the integration with your templates"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Menu\\": "src/Knp/Menu"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/KnpLabs/KnpMenu/contributors"
+                },
+                {
+                    "name": "KnpLabs",
+                    "homepage": "https://knplabs.com"
+                }
+            ],
+            "description": "An object oriented menu library",
+            "homepage": "https://knplabs.com",
+            "keywords": [
+                "menu",
+                "tree"
+            ],
+            "time": "2017-11-18T20:49:26+00:00"
         },
         {
             "name": "m1/env",
@@ -397,6 +1149,54 @@
                 "support"
             ],
             "time": "2016-10-06T19:31:28+00:00"
+        },
+        {
+            "name": "maiconpinto/cakephp-adminlte-theme",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maiconpinto/cakephp-adminlte-theme.git",
+                "reference": "2f41a2db457680fd16019c0593ba65c6691fa738"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maiconpinto/cakephp-adminlte-theme/zipball/2f41a2db457680fd16019c0593ba65c6691fa738",
+                "reference": "2f41a2db457680fd16019c0593ba65c6691fa738",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "php": ">=5.4.16"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "AdminLTE\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maicon Pinto",
+                    "email": "maiconsilva.pinto@gmail.com",
+                    "homepage": "https://www.maiconpinto.com.br/",
+                    "role": "Author"
+                }
+            ],
+            "description": "CakePHP 3.x AdminLTE Theme.",
+            "homepage": "https://github.com/maiconpinto/cakephp-adminlte-theme",
+            "keywords": [
+                "cakephp",
+                "plugin",
+                "templates"
+            ],
+            "time": "2017-08-25T02:11:19+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -965,6 +1765,66 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2017-12-04T18:15:22+00:00"
+        },
+        {
+            "name": "willdurand/geocoder",
+            "version": "v3.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geocoder-php/php-common.git",
+                "reference": "ccc178e2984c0af24881faa0ffe515f20e5e8c23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geocoder-php/php-common/zipball/ccc178e2984c0af24881faa0ffe515f20e5e8c23",
+                "reference": "ccc178e2984c0af24881faa0ffe515f20e5e8c23",
+                "shasum": ""
+            },
+            "require": {
+                "egeloen/http-adapter": "~0.8",
+                "igorw/get-in": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "geoip2/geoip2": "~2.0",
+                "symfony/stopwatch": "~2.5"
+            },
+            "suggest": {
+                "ext-geoip": "Enabling the geoip extension allows you to use the MaxMindProvider.",
+                "geoip/geoip": "If you are going to use the MaxMindBinaryProvider (conflict with geoip extension).",
+                "geoip2/geoip2": "If you are going to use the GeoIP2DatabaseProvider.",
+                "symfony/stopwatch": "If you want to use the TimedGeocoder"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Geocoder": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William Durand",
+                    "email": "william.durand1@gmail.com"
+                }
+            ],
+            "description": "The almost missing Geocoder PHP 5.4 library.",
+            "homepage": "http://geocoder-php.org",
+            "keywords": [
+                "abstraction",
+                "geocoder",
+                "geocoding",
+                "geoip"
+            ],
+            "time": "2015-12-06T20:17:20+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",

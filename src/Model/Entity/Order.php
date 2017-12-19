@@ -15,6 +15,7 @@ use Cake\ORM\Entity;
  *
  * @property \App\Model\Entity\Menu $menu
  * @property \App\Model\Entity\User $user
+ * @property \App\Model\Entity\Status $status
  * @property \App\Model\Entity\Delivery[] $deliveries
  */
 class Order extends Entity
@@ -37,6 +38,7 @@ class Order extends Entity
         'status_id' => true,
         'menu' => true,
         'user' => true,
+        'status' => true,
         'deliveries' => true
     ];
 }

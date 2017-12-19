@@ -44,7 +44,7 @@ class OrdersFixture extends TestFixture
             'menu_id' => 1,
             'quantity' => 1,
             'user_id' => 1,
-            'created' => '2017-12-11 04:51:27',
+            'created' => '2017-12-13 10:16:57',
             'status_id' => 1
         ],
     ];

@@ -31,6 +31,7 @@ class OrdersTableTest extends TestCase
         'app.roles',
         'app.departments',
         'app.jobapps',
+        'app.statuses',
         'app.deliveries'
     ];
 

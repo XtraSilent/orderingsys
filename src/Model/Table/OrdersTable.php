@@ -11,7 +11,7 @@ use Cake\Validation\Validator;
  *
  * @property \App\Model\Table\MenusTable|\Cake\ORM\Association\BelongsTo $Menus
  * @property \App\Model\Table\UsersTable|\Cake\ORM\Association\BelongsTo $Users
- * @property |\Cake\ORM\Association\BelongsTo $Statuses
+ * @property \App\Model\Table\StatusesTable|\Cake\ORM\Association\BelongsTo $Statuses
  * @property \App\Model\Table\DeliveriesTable|\Cake\ORM\Association\HasMany $Deliveries
  *
  * @method \App\Model\Entity\Order get($primaryKey, $options = [])

@@ -21,7 +21,7 @@ class OrdersController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Menus', 'Users']
+            'contain' => ['Menus', 'Users', 'Statuses']
         ];
         $orders = $this->paginate($this->Orders);
 
@@ -39,7 +39,7 @@ class OrdersController extends AppController
     public function view($id = null)
     {
         $order = $this->Orders->get($id, [
-            'contain' => ['Menus', 'Users', 'Deliveries']
+            'contain' => ['Menus', 'Users', 'Statuses', 'Deliveries']
         ]);
 
         $this->set('order', $order);
@@ -65,7 +65,8 @@ class OrdersController extends AppController
         }
         $menus = $this->Orders->Menus->find('list', ['limit' => 200]);
         $users = $this->Orders->Users->find('list', ['limit' => 200]);
-        $this->set(compact('order', 'menus', 'users'));
+        $statuses = $this->Orders->Statuses->find('list', ['limit' => 200]);
+        $this->set(compact('order', 'menus', 'users', 'statuses'));
         $this->set('_serialize', ['order']);
     }
 
@@ -92,7 +93,8 @@ class OrdersController extends AppController
         }
         $menus = $this->Orders->Menus->find('list', ['limit' => 200]);
         $users = $this->Orders->Users->find('list', ['limit' => 200]);
-        $this->set(compact('order', 'menus', 'users'));
+        $statuses = $this->Orders->Statuses->find('list', ['limit' => 200]);
+        $this->set(compact('order', 'menus', 'users', 'statuses'));
         $this->set('_serialize', ['order']);
     }
 
@@ -115,4 +117,15 @@ class OrdersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function listorder(){
+        $order = $this->Orders->get($id, [
+            'contain' => ['Menus', 'Users', 'Statuses', 'Deliveries']
+        ]);
+
+        $this->set('order', $order);
+        $this->set('_serialize', ['order']);
+        
+       
+   }
 }

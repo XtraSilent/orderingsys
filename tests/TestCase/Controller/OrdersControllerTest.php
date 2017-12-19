@@ -23,6 +23,7 @@ class OrdersControllerTest extends IntegrationTestCase
         'app.roles',
         'app.departments',
         'app.jobapps',
+        'app.statuses',
         'app.deliveries'
     ];
 

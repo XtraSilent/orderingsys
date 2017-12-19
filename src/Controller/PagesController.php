@@ -28,7 +28,7 @@ use Cake\View\Exception\MissingTemplateException;
  */
 class PagesController extends AppController
 {
-
+    public $helpers = array('GoogleMap', 'Geshi.Geshi'); 
     /**
      * Displays a view
      *

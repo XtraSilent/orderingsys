@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+//use \Cake\Core\Plugin::load('BootstrapUI');
 
 /**
  * Application Controller
@@ -27,7 +28,7 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
-
+    use \Crud\Controller\ControllerTrait;
     /**
      * Initialization hook method.
      *
@@ -40,7 +41,7 @@ class AppController extends Controller
     public function initialize()
     {
         parent::initialize();
-
+        
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
@@ -80,6 +81,8 @@ class AppController extends Controller
         // Note: These defaults are just to get started quickly with development
         // and should not be used in production. You should instead set "_serialize"
         // in each action as required.
+        
+        
         if (!array_key_exists('_serialize', $this->viewVars) &&
             in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
@@ -104,16 +107,7 @@ class AppController extends Controller
 
     }
 
-    public function isAuthorized($user)
-    {
-        // Admin can access every action
-        if (isset($user['role_id']) && $user['role_id'] === 1) {
-            return true;
-        }
     
-        // Default deny
-        return false;
-    }
     
    
 }
